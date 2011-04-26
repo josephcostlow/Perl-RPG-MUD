@@ -10,13 +10,11 @@ TO DO:
  - add health and mana command
  - add use command
  - add items table
+ - add take and drop command
+ - add examine command
+ - add item table
+ - add say command? not sure how to push this out to people who are already
+	in a location...maybe have view_location open a socket that's left open
  - 
-
-
-
-
-
-
-
 
 

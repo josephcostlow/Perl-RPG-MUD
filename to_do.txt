@@ -1,0 +1,22 @@
+TO DO:
+
+ - in input_check, split possible input arrays into @accepted_commands,
+	@accepted_directions
+ - add 'clear' command
+ - add user table
+ - when going to new location, update user table with location
+ - on view location, show other users with same location id
+ - add inventory command
+ - add health and mana command
+ - add use command
+ - add items table
+ - 
+
+
+
+
+
+
+
+
+

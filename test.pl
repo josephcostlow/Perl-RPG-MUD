@@ -21,5 +21,5 @@ sub get_current_location {
 package main;
 
 our $player = Player->new({ location => 9995 });
-player_prompt();
+view_location(9995);
 

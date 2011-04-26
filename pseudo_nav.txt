@@ -1,0 +1,61 @@
+
+
+sub player_prompt() {
+	print '>';
+	$command = <STDIN>;
+	$command = chomp($command);
+	nav_check($command);
+}
+
+
+sub nav_check() {
+	$command = shift;
+
+	if ($command !in @accepted commands) {
+		view_location($player->current_location, warning);
+	}
+	if ($command =~ m/[^nN]/) {
+		$dest_dir = 'NORTH';
+	}
+	# do the above for each direction and action
+	# or use a switch statement
+
+	$query = 'get $dest_dir where loc_id = $player->current_loc';
+
+	$nav_result = mysql($query);
+
+	if (!defined($nav_result) {
+		view_location($player->current_location, warning);
+	}
+
+	else {
+		$player->set_location($nav_result);
+		view_location($player->current_location);
+	}
+}
+
+sub view_location() {
+	$location = shift;
+	$warning = shift;
+
+	$query = 'get * from location where id = $location';
+
+	push $query into %current_location;
+
+	print 'Current Location - $current_location['loc_name'] \n\n";
+	print '$current_lcoation['loc_desc'];
+
+	if (length($current_location['items']) {
+		print them, same with people, etc.;
+	}
+
+	player_input();
+}
+
+
+
+
+
+
+
+
